@@ -8,6 +8,13 @@
   overflow-x: hidden;
 }
 
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .navbar {
   position: relative;
   width: 100%;
@@ -15,7 +22,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
 
   &__logo {
     font-size: 26px;
@@ -25,23 +31,8 @@
   }
 
   &__collection {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 280px;
-    height: 100vh;
-    background-color: black;
-    padding: 40px 20px;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
-    transition: right 0.3s ease;
-    z-index: 100;
-
-    &.active {
-      right: 0;
-    }
+    gap: 40px;
 
     li {
       list-style: none;
@@ -57,14 +48,6 @@
 
   &__menu {
     display: none;
-    cursor: pointer;
-    position: relative;
-    z-index: 101;
-
-    i {
-      font-size: 24px;
-      color: white;
-    }
   }
 
   &__options {
@@ -73,8 +56,35 @@
   }
 
   @media (max-width: 800px) {
+    &__collection {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 280px;
+      height: 100vh;
+      background-color: black;
+      padding: 40px 20px;
+      flex-direction: column;
+      box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+      transition: right 0.3s ease;
+      z-index: 100;
+      display: flex;
+
+      &.active {
+        right: 0;
+      }
+    }
+
     &__menu {
       display: block;
+      cursor: pointer;
+      position: relative;
+      z-index: 101;
+
+      i {
+        font-size: 24px;
+        color: white;
+      }
     }
   }
 
