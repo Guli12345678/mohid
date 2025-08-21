@@ -1,0 +1,77 @@
+.header {
+  width: 100%;
+  color: white;
+  height: 100%;
+  background: linear-gradient(#383638, #0b0b0b);
+
+  &__card {
+    margin-top: 154px;
+    display: flex;
+    gap: 183px;
+    flex-direction: row-reverse;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+    }
+  }
+
+  &-body {
+    width: 50%;
+    h1 {
+      font-size: 64px;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  }
+
+  &__input {
+    width: 443px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 30px;
+    background: #ffffff;
+
+    i {
+      color: #3858d6;
+    }
+    input {
+      color: gray;
+    }
+
+    button {
+      width: 112px;
+      height: 45px;
+      color: white;
+      background: #3858d6;
+      border-radius: 9px;
+    }
+  }
+}
+
+.navbar {
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__logo {
+    font-size: 26px;
+    display: flex;
+  }
+
+  &__collection {
+    display: flex;
+    gap: 40px;
+    text-decoration: none;
+  }
+
+  .navbar__icons {
+    gap: 160px;
+  }
+}
