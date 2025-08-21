@@ -1,0 +1,92 @@
+.comments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 135px;
+  text-align: center;
+
+  &__wrapper {
+    display: flex;
+    max-width: 1102px;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    gap: 47px;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    display: flex;
+    width: 100%;
+    max-width: 454px;
+    flex-direction: row;
+    gap: 30px;
+
+    background: #f6f6f6;
+    border-radius: 22px;
+    margin-top: 54px;
+
+    .comments__body {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        margin-top: 10px;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+      }
+    }
+    .comments__image {
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  &__pages {
+    margin-top: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    div {
+      width: 18px;
+      height: 18px;
+      background: #d9d9d9;
+      border-radius: 50%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__card {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    & {
+      margin: 0 auto;
+      padding: 0 12px;
+    }
+
+    &__wrapper {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__card {
+      width: 100%;
+    }
+  }
+}

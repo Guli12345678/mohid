@@ -1,77 +1,96 @@
 .header {
   width: 100%;
+  height: 80px;
   color: white;
-  height: 100%;
-  background: linear-gradient(#383638, #0b0b0b);
-
-  &__card {
-    margin-top: 154px;
-    display: flex;
-    gap: 183px;
-    flex-direction: row-reverse;
-  }
-
-  &__image {
-    img {
-      width: 100%;
-    }
-  }
-
-  &-body {
-    width: 50%;
-    h1 {
-      font-size: 64px;
-    }
-    p {
-      margin-top: 20px;
-      font-size: 16px;
-    }
-  }
-
-  &__input {
-    width: 443px;
-    height: 60px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 15px;
-    margin-top: 30px;
-    background: #ffffff;
-
-    i {
-      color: #3858d6;
-    }
-    input {
-      color: gray;
-    }
-
-    button {
-      width: 112px;
-      height: 45px;
-      color: white;
-      background: #3858d6;
-      border-radius: 9px;
-    }
-  }
+  top: 0;
+  z-index: 2;
+  position: absolute;
+  overflow-x: hidden;
 }
 
 .navbar {
+  position: relative;
+  width: 100%;
   height: 74px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
+
   &__logo {
     font-size: 26px;
     display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   &__collection {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: black;
+    padding: 40px 20px;
     display: flex;
-    gap: 40px;
-    text-decoration: none;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    z-index: 100;
+
+    &.active {
+      right: 0;
+    }
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
   }
 
-  .navbar__icons {
-    gap: 160px;
+  &__menu {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 101;
+
+    i {
+      font-size: 24px;
+      color: white;
+    }
+  }
+
+  &__options {
+    display: flex;
+    gap: 20px;
+  }
+
+  @media (max-width: 800px) {
+    &__menu {
+      display: block;
+    }
+  }
+
+  @media (max-width: 500px) {
+    flex-wrap: wrap;
+
+    &__options {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: black;
+      border-top: 1px solid #ddd;
+      display: flex;
+      padding: 14px;
+      justify-content: space-between;
+    }
   }
 }

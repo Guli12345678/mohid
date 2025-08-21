@@ -7,8 +7,6 @@
 .container {
   max-width: 1126px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -27,4 +25,14 @@ input,
 button {
   border: none;
   outline: none;
+}
+
+@media (max-width: 800px) {
+  .hero,
+  .navbar,
+  .comments__card {
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+  }
 }
